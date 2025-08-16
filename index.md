@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Koykka Photography
+![Koykka Photography](/assets/images/logo_banner.svg){: .banner }
 
 I am a Toronto-based professional photographer specializing in food and portrait photography. My journey began over a decade ago with my first Nikon DSLR, sparking a passion that has grown into a dedicated craft.
 
