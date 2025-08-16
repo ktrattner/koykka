@@ -1,0 +1,25 @@
+title: "Koykka"
+description: "Minimal static site for koykka.ca"
+url: "https://koykka.ca"
+baseurl: ""  # leave empty for apex domain
+
+theme: minima  # simple default theme; can be replaced or customized
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Simple navbar config
+navbar:
+  - title: Home
+    url: /
+  - title: About Me
+    url: /about/
+  - title: Portrait
+    url: /portrait/
+  - title: Food
+    url: /food/
+  - title: Contact
+    url: /contact/
+
+# Build settings
+markdown: kramdown
