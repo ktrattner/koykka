@@ -14,9 +14,9 @@ main.container { padding-top: 1.25rem; }
 
 .profile-pic {
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
   display: block;
-  margin: 1rem auto;
+  margin: 1rem 0;
 }
