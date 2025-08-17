@@ -1,11 +1,16 @@
 ---
-layout: gallery
+layout: default
 title: Food
 permalink: /food/
-images:
-  - src: /assets/images/food/sample-1.jpg
-  - src: /assets/images/food/sample-2.jpg
-  - src: /assets/images/food/sample-3.jpg
-  - src: /assets/images/food/sample-4.jpg
-  - src: /assets/images/food/sample-5.jpg
 ---
+
+# Food
+
+<div class="tile-grid">
+  {% for i in (1..12) %}
+  <a class="tile" href="{{ ("/food/photo-" | append: i | append: "/") | relative_url }}">
+    <div class="thumb" style="background-image: url('{{ ("/assets/images/food/photo-" | append: i | append: "-thumb.jpg") | relative_url }}');"></div>
+    <span class="title">Photo {{ i }}</span>
+  </a>
+  {% endfor %}
+</div>
