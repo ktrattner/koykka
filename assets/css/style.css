@@ -105,3 +105,26 @@ main.container { padding-top: 1.25rem; }
   margin-top: 8px;
   font-weight: 600;
 }
+
+/* Navigation links (Previous/Next) */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  color: #444;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links .disabled {
+  color: #bbb;
+  pointer-events: none;
+  text-decoration: none;
+}
