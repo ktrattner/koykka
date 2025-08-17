@@ -29,3 +29,79 @@ main.container { padding-top: 1.25rem; }
   margin: 0 0 1rem 0;
   border-radius: 8px;
 }
+
+/* Portrait landing tiles */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.tile {
+  text-decoration: none;
+  color: inherit;
+}
+.tile .thumb {
+  width: 100%;
+  padding-top: 100%;           /* perfect square */
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-color: #f2f2f2;   /* fallback if no image yet */
+}
+.tile .title {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* Sub-page long-scroll images + captions */
+.portfolio-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 1rem 0;
+  border-radius: 8px;
+}
+.caption {
+  margin: 0 0 2rem 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* === Updated additions for banner + portrait tiles === */
+
+/* Keep .logo-banner for backwards compatibility */
+.logo-banner {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 1rem 0;
+  border-radius: 8px;
+}
+
+/* Portrait landing grid (9-square tiles) */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.tile {
+  text-decoration: none;
+  color: inherit;
+}
+.tile .thumb {
+  width: 100%;
+  padding-top: 100%; /* square */
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  background-color: #f2f2f2; /* fallback if missing image */
+}
+.tile .title {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 600;
+}
