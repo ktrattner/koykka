@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Photo 2
+title: Spice of Life
 permalink: /food/photo-2/
 ---
 
-# Photo 2
+# Spice of Life
 
 ![Photo 2]({{ "/assets/images/food/photo-2.jpg" | relative_url }}){: .portfolio-img }
-<p class="caption">Optional description for Photo 2.</p>
+<p class="caption">A vibrant composition of over a dozen colourful spices displayed on antique spoons, celebrating the true spice of life.</p>
 
 <div class="nav-links">
   <a href="{{ '/food/photo-1/' | relative_url }}">← Previous</a>
