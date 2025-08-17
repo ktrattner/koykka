@@ -117,3 +117,13 @@ main.container { padding-top: 1.25rem; }
 .social-icon:hover { opacity: 1; }
 
 /* Updated: icon styles + deduped grid + hover (Aug 17, 2025) */
+
+/* Footer social container alignment + sizing */
+.footer-social {
+  text-align: left;
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
