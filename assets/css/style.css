@@ -21,7 +21,7 @@ main.container { padding-top: 1.25rem; }
   margin: 1rem 0;
 }
 
-.banner {
+.banner, .logo-banner {
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -71,40 +71,17 @@ main.container { padding-top: 1.25rem; }
 
 /* === Updated additions for banner + portrait tiles === */
 
-/* Keep .logo-banner for backwards compatibility */
-.logo-banner {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 0 1rem 0;
-  border-radius: 8px;
+/* Tile interactions + accessibility */
+.tile .thumb { transition: transform 160ms ease; }
+@media (prefers-reduced-motion: reduce) {
+  .tile .thumb { transition: none; }
 }
-
-/* Portrait landing grid (9-square tiles) */
-.tile-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
-}
-.tile {
-  text-decoration: none;
-  color: inherit;
-}
-.tile .thumb {
-  width: 100%;
-  padding-top: 100%; /* square */
-  border-radius: 8px;
-  background-size: cover;
-  background-position: center;
-  background-color: #f2f2f2; /* fallback if missing image */
-}
-.tile .title {
-  display: block;
-  text-align: center;
-  margin-top: 8px;
-  font-weight: 600;
-}
+.tile:hover .thumb,
+.tile:focus .thumb,
+.tile:focus-visible .thumb { transform: scale(1.02); }
+.tile:focus,
+.tile:focus-visible { outline: none; }
+.tile:focus-visible .thumb { box-shadow: 0 0 0 3px rgba(0,0,0,0.12); }
 
 /* Navigation links (Previous/Next) */
 .nav-links {
@@ -128,3 +105,15 @@ main.container { padding-top: 1.25rem; }
   pointer-events: none;
   text-decoration: none;
 }
+
+/* Footer social icon */
+.social-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: 0.9;
+}
+.social-icon:hover { opacity: 1; }
+
+/* Updated: icon styles + deduped grid + hover (Aug 17, 2025) */
