@@ -147,3 +147,10 @@ main.container { padding-top: 1.25rem; }
   align-items: center;
   gap: 6px;
 }
+
+/* Header brand logo */
+.brand-logo {
+  max-height: 48px;
+  width: auto;
+  display: block;
+}
