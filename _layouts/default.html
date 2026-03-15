@@ -1,17 +1,41 @@
 ---
 ---
 {% include head.html %}
-  <main class="container">
-    {{ content }}
+  <main class="container{% if page.main_class %} {{ page.main_class }}{% endif %}">
+    {% if page.content_wrapper_class %}
+      <article class="{{ page.content_wrapper_class }}">
+        {{ content }}
+      </article>
+    {% else %}
+      {{ content }}
+    {% endif %}
   </main>
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; {{ "now" | date: "%Y" }} Brandon Koykka</p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/koykka/" target="_blank" rel="noopener">
-          <img src="{{ '/assets/icons/instagram.svg' | relative_url }}" alt="Instagram" class="social-icon">
-        </a>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="footer-kicker">Koykka Photography</p>
+        <p class="footer-summary">Portrait and food photography shaped by warmth, texture, and a relaxed editorial eye.</p>
       </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <p class="footer-heading">Explore</p>
+        <ul class="footer-links">
+          {%- for item in site.navbar -%}
+            <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+      <div class="footer-connect">
+        <p class="footer-heading">Connect</p>
+        <a class="footer-instagram" href="https://www.instagram.com/koykka/" target="_blank" rel="noopener">
+          <img src="{{ '/assets/icons/instagram.svg' | relative_url }}" alt="" class="social-icon">
+          <span>@koykka</span>
+        </a>
+        <a class="footer-cta" href="{{ '/contact/' | relative_url }}">Start a project</a>
+      </div>
+    </div>
+    <div class="container footer-meta">
+      <p>&copy; {{ "now" | date: "%Y" }} Brandon Koykka</p>
+      <p>Muskoka, Ontario</p>
     </div>
   </footer>
 </body>

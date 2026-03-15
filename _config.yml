@@ -7,10 +7,22 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+defaults:
+  - scope:
+      path: "portrait"
+    values:
+      body_class: page-photo-detail
+      main_class: photo-detail
+      content_wrapper_class: photo-detail-flow
+  - scope:
+      path: "food"
+    values:
+      body_class: page-photo-detail
+      main_class: photo-detail
+      content_wrapper_class: photo-detail-flow
+
 # Simple navbar config
 navbar:
-  - title: Home
-    url: /
   - title: About Me
     url: /about/
   - title: Portrait
