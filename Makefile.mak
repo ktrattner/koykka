@@ -1,11 +1,13 @@
-# Makefile for local Jekyll dev with Docker
+PORT ?= 4173
+HOST ?= 127.0.0.1
 
-# Run site in Docker with live reload
+# Install Ruby dependencies locally into vendor/bundle.
+install:
+	bundle install
+
+# Run the site locally with incremental rebuilds.
 serve:
-	docker run --rm -it \
-	  -p 4000:4000 -p 35729:35729 \
-	  -v "$$(pwd)":/srv/jekyll -w /srv/jekyll \
-	  jekyll/jekyll:4 jekyll serve --livereload --host 0.0.0.0
+	bundle exec jekyll serve --host $(HOST) --port $(PORT)
 
 # Clean the generated site (_site folder)
 clean:
@@ -13,6 +15,4 @@ clean:
 
 # Build site (no server)
 build:
-	docker run --rm -it \
-	  -v "$$(pwd)":/srv/jekyll -w /srv/jekyll \
-	  jekyll/jekyll:4 jekyll build
+	bundle exec jekyll build

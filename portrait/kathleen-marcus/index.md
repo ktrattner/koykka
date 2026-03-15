@@ -7,4 +7,4 @@ permalink: /portrait/kathleen-marcus/
 # Kathleen & Marcus
 
 ![Kathleen & Marcus 1]({{ "/assets/images/portrait/kathleen-marcus/1.jpg" | relative_url }}){: .portfolio-img }
-<p class="caption">Kathleen & Marcus Series Photograph 1</p>
+<p class="caption">A relaxed couple portrait with a sense of place and connection.</p>
